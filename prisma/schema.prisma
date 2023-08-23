@@ -28,9 +28,14 @@ model Product {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   userId    String   @db.ObjectId
-  gender    String
+  gender    Gender
   img       String
-  price     String
+  price     Int
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+enum Gender {
+    male
+    female
 }
