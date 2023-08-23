@@ -1,7 +1,7 @@
 import React from "react";
 import { Poppins } from "next/font/google";
-import Navbar from "~/modules/home/Navbar";
 import { Toaster } from "react-hot-toast";
+import Navbar from "./Navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
