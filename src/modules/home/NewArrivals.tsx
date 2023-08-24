@@ -13,21 +13,8 @@ const NewArrivals = () => {
       <p className="font-light">Recently added clothes!</p>
       <div className="mt-10 grid w-full grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
         {products?.map((product) => (
-          <Card
-            title={product.title}
-            price={product.price}
-            imgSrc={`/images/product-${product.img}.jpg`}
-          />
+          <Card data={product} />
         ))}
-
-        {/* {products.map((product) => (
-          <Card
-            key={product._id}
-            title={product.title}
-            price={500}
-            imgSrc={`/images/product-${product.imgUrl}.jpg`}
-          />
-        ))} */}
       </div>
     </div>
   );
